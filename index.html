@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UjalaDeals - Digital Solutions That Care About Your Success</title>
+  <title>UjalaDeals - Premium Digital Tools That Care About Your Success</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
@@ -20,29 +20,30 @@
       --border-radius: 10px;
       --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       --transition: all 0.3s ease;
+      --care-gradient: linear-gradient(135deg, #f72585, #4361ee);
     }
-    
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    
+
     body {
       background-color: #fafbff;
       color: var(--dark);
       line-height: 1.6;
       overflow-x: hidden;
     }
-    
+
     .container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
-    
+
     .btn {
       display: inline-block;
       padding: 12px 28px;
@@ -55,39 +56,50 @@
       font-size: 16px;
       text-decoration: none;
     }
-    
+
     .btn-primary {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
       box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
     }
-    
+
     .btn-primary:hover {
       transform: translateY(-3px);
       box-shadow: 0 7px 20px rgba(67, 97, 238, 0.6);
     }
-    
+
     .btn-accent {
       background: linear-gradient(135deg, var(--accent), #d81159);
       color: white;
       box-shadow: 0 4px 15px rgba(247, 37, 133, 0.4);
     }
-    
+
     .btn-accent:hover {
       transform: translateY(-3px);
       box-shadow: 0 7px 20px rgba(247, 37, 133, 0.6);
     }
-    
+
+    .btn-care {
+      background: var(--care-gradient);
+      color: white;
+      box-shadow: 0 4px 15px rgba(247, 37, 133, 0.4);
+    }
+
+    .btn-care:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 20px rgba(247, 37, 133, 0.6);
+    }
+
     .btn-large {
       padding: 15px 35px;
       font-size: 18px;
     }
-    
+
     .btn-block {
       display: block;
       width: 100%;
     }
-    
+
     /* Security Badge */
     .security-badge {
       background-color: var(--secondary);
@@ -97,11 +109,11 @@
       font-size: 14px;
       font-weight: 500;
     }
-    
+
     .security-badge i {
       margin-right: 8px;
     }
-    
+
     /* Header */
     header {
       background-color: white;
@@ -110,14 +122,14 @@
       top: 0;
       z-index: 1000;
     }
-    
+
     .header-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 0;
     }
-    
+
     .logo {
       display: flex;
       align-items: center;
@@ -125,21 +137,21 @@
       font-weight: 700;
       color: var(--secondary);
     }
-    
+
     .logo i {
       margin-right: 10px;
       color: var(--accent);
     }
-    
+
     nav ul {
       display: flex;
       list-style: none;
     }
-    
+
     nav ul li {
       margin: 0 15px;
     }
-    
+
     nav ul li a {
       text-decoration: none;
       color: var(--dark);
@@ -148,24 +160,25 @@
       border-radius: 5px;
       transition: var(--transition);
     }
-    
+
     nav ul li a:hover, nav ul li a.active {
       color: var(--primary);
       background-color: rgba(67, 97, 238, 0.1);
     }
-    
+
     .header-actions {
       display: flex;
       align-items: center;
     }
-    
+
     .cart-icon {
       position: relative;
       margin-right: 20px;
       font-size: 20px;
       color: var(--dark);
+      cursor: pointer;
     }
-    
+
     .cart-count {
       position: absolute;
       top: -8px;
@@ -180,7 +193,7 @@
       justify-content: center;
       align-items: center;
     }
-    
+
     /* Hero Section */
     .hero {
       padding: 80px 0;
@@ -188,7 +201,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .hero:before {
       content: "";
       position: absolute;
@@ -200,31 +213,31 @@
       right: -200px;
       z-index: 0;
     }
-    
+
     .hero-content {
       display: flex;
       align-items: center;
       position: relative;
       z-index: 1;
     }
-    
+
     .hero-text {
       flex: 1;
       padding-right: 50px;
     }
-    
+
     .hero-text h1 {
       font-size: 3.5rem;
       line-height: 1.2;
       margin-bottom: 20px;
       color: var(--secondary);
     }
-    
+
     .hero-text h1 span {
       color: var(--accent);
       position: relative;
     }
-    
+
     .hero-text h1 span:after {
       content: "";
       position: absolute;
@@ -235,24 +248,44 @@
       background-color: rgba(247, 37, 133, 0.2);
       z-index: -1;
     }
-    
+
     .hero-text p {
       font-size: 1.25rem;
       color: var(--gray);
       margin-bottom: 30px;
       max-width: 600px;
     }
-    
+
+    .hero-bullets {
+      margin: 25px 0;
+      padding-left: 20px;
+    }
+
+    .hero-bullets li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 30px;
+      font-size: 1.1rem;
+    }
+
+    .hero-bullets li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
     .hero-btns {
       display: flex;
       gap: 15px;
     }
-    
+
     .hero-image {
       flex: 1;
       position: relative;
     }
-    
+
     .offer-card {
       background: white;
       border-radius: var(--border-radius);
@@ -264,12 +297,13 @@
       margin-left: auto;
       transform: rotate(3deg);
       transition: var(--transition);
+      border: 3px solid var(--accent);
     }
-    
+
     .offer-card:hover {
       transform: rotate(0) translateY(-10px);
     }
-    
+
     .offer-badge {
       position: absolute;
       top: 20px;
@@ -282,45 +316,45 @@
       font-size: 14px;
       box-shadow: 0 5px 15px rgba(247, 37, 133, 0.3);
     }
-    
+
     .offer-header {
       text-align: center;
       margin-bottom: 25px;
     }
-    
+
     .offer-header h3 {
       font-size: 1.8rem;
       color: var(--secondary);
       margin-bottom: 5px;
     }
-    
+
     .offer-header p {
       color: var(--gray);
     }
-    
+
     .offer-features {
       display: flex;
       justify-content: space-between;
       margin-bottom: 25px;
     }
-    
+
     .feature {
       text-align: center;
       flex: 1;
     }
-    
+
     .feature i {
       font-size: 2rem;
       color: var(--primary);
       margin-bottom: 10px;
     }
-    
+
     .feature span {
       font-size: 14px;
       font-weight: 500;
       color: var(--dark);
     }
-    
+
     .price {
       display: flex;
       justify-content: center;
@@ -328,19 +362,19 @@
       gap: 15px;
       margin-bottom: 25px;
     }
-    
+
     .amount {
       font-size: 2.2rem;
       font-weight: 700;
       color: var(--accent);
     }
-    
+
     .original {
       font-size: 1.2rem;
       color: var(--gray);
       text-decoration: line-through;
     }
-    
+
     .countdown {
       background: rgba(67, 97, 238, 0.1);
       padding: 15px;
@@ -350,14 +384,14 @@
       font-weight: 600;
       color: var(--secondary);
     }
-    
+
     .countdown-timer {
       display: flex;
       justify-content: center;
       gap: 10px;
       margin-top: 10px;
     }
-    
+
     .countdown-item {
       background: white;
       padding: 8px 12px;
@@ -365,44 +399,44 @@
       font-weight: 700;
       box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     }
-    
+
     /* Trust Badges */
     .trust-section {
       padding: 30px 0;
       background: white;
     }
-    
+
     .trust-badges {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       gap: 20px;
     }
-    
+
     .trust-badge {
       display: flex;
       align-items: center;
       font-weight: 500;
       color: var(--secondary);
     }
-    
+
     .trust-badge i {
       margin-right: 10px;
       font-size: 1.5rem;
       color: var(--primary);
     }
-    
+
     /* Testimonials */
     .testimonials {
       padding: 80px 0;
       background: linear-gradient(135deg, #f8f9fa, #e9ecef);
     }
-    
+
     .section-title {
       text-align: center;
       margin-bottom: 50px;
     }
-    
+
     .section-title h2 {
       font-size: 2.5rem;
       color: var(--secondary);
@@ -410,7 +444,7 @@
       position: relative;
       display: inline-block;
     }
-    
+
     .section-title h2:after {
       content: "";
       position: absolute;
@@ -422,27 +456,28 @@
       background: var(--accent);
       border-radius: 2px;
     }
-    
+
     .section-title p {
       color: var(--gray);
       max-width: 600px;
       margin: 20px auto 0;
     }
-    
+
     .testimonial-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
     }
-    
+
     .testimonial-card {
       background: white;
       border-radius: var(--border-radius);
       box-shadow: var(--box-shadow);
       padding: 30px;
       position: relative;
+      border-left: 4px solid var(--accent);
     }
-    
+
     .testimonial-card:before {
       content: """;
       position: absolute;
@@ -453,7 +488,7 @@
       font-family: Georgia, serif;
       line-height: 1;
     }
-    
+
     .testimonial-content {
       margin-bottom: 20px;
       color: var(--dark);
@@ -461,12 +496,12 @@
       position: relative;
       z-index: 1;
     }
-    
+
     .testimonial-author {
       display: flex;
       align-items: center;
     }
-    
+
     .author-avatar {
       width: 50px;
       height: 50px;
@@ -479,28 +514,28 @@
       font-weight: bold;
       color: var(--primary);
     }
-    
+
     .author-info h4 {
       font-size: 1.1rem;
       color: var(--dark);
     }
-    
+
     .author-info p {
       font-size: 0.9rem;
       color: var(--gray);
     }
-    
+
     /* Featured Products */
     #featured {
       padding: 80px 0;
     }
-    
+
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
-    
+
     .product-card {
       background: white;
       border-radius: var(--border-radius);
@@ -508,13 +543,15 @@
       box-shadow: var(--box-shadow);
       transition: var(--transition);
       position: relative;
+      border: 2px solid #f0f4ff;
     }
-    
+
     .product-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      border-color: var(--accent);
     }
-    
+
     .featured-tag {
       position: absolute;
       top: 15px;
@@ -528,7 +565,7 @@
       box-shadow: 0 3px 10px rgba(247, 37, 133, 0.3);
       z-index: 1;
     }
-    
+
     .product-tag {
       position: absolute;
       top: 15px;
@@ -542,29 +579,29 @@
       box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
       z-index: 1;
     }
-    
+
     .product-image {
       height: 200px;
       background-size: cover;
       background-position: center;
     }
-    
+
     .product-info {
       padding: 25px;
     }
-    
+
     .product-info h3 {
       font-size: 1.4rem;
       color: var(--secondary);
       margin-bottom: 10px;
     }
-    
+
     .product-info p {
       color: var(--gray);
       margin-bottom: 20px;
       min-height: 60px;
     }
-    
+
     .whatsapp-btn {
       background: #25D366;
       color: white;
@@ -579,18 +616,18 @@
       cursor: pointer;
       transition: var(--transition);
     }
-    
+
     .whatsapp-btn i {
       margin-right: 8px;
       font-size: 1.2rem;
     }
-    
+
     .whatsapp-btn:hover {
       background: #128C7E;
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
     }
-    
+
     /* Care Section */
     .care-section {
       padding: 80px 0;
@@ -599,7 +636,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .care-section:before {
       content: "";
       position: absolute;
@@ -610,7 +647,7 @@
       top: -100px;
       right: -100px;
     }
-    
+
     .care-section:after {
       content: "";
       position: absolute;
@@ -621,7 +658,7 @@
       bottom: -100px;
       left: -100px;
     }
-    
+
     .care-content {
       position: relative;
       z-index: 1;
@@ -629,18 +666,18 @@
       max-width: 800px;
       margin: 0 auto;
     }
-    
+
     .care-content h2 {
       font-size: 2.8rem;
       margin-bottom: 20px;
     }
-    
+
     .care-content p {
       font-size: 1.2rem;
       margin-bottom: 30px;
       opacity: 0.9;
     }
-    
+
     .care-icons {
       display: flex;
       justify-content: center;
@@ -648,36 +685,45 @@
       gap: 40px;
       margin-top: 50px;
     }
-    
+
     .care-icon {
       text-align: center;
       max-width: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px 15px;
+      border-radius: 15px;
+      transition: var(--transition);
     }
-    
+
+    .care-icon:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
     .care-icon i {
       font-size: 3rem;
       margin-bottom: 20px;
       color: var(--accent);
     }
-    
+
     .care-icon h3 {
       font-size: 1.3rem;
       margin-bottom: 10px;
     }
-    
+
     /* All Products */
     #products {
       padding: 80px 0;
       background-color: #f8f9fa;
     }
-    
+
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       margin-bottom: 20px;
     }
-    
+
     .tool-item {
       background: rgba(67, 97, 238, 0.1);
       padding: 8px 10px;
@@ -687,44 +733,44 @@
       font-weight: 500;
       color: var(--primary);
     }
-    
+
     /* Guarantee Section */
     .guarantee {
       padding: 80px 0;
       background: white;
     }
-    
+
     .guarantee-content {
       display: flex;
       align-items: center;
       gap: 50px;
     }
-    
+
     .guarantee-text {
       flex: 1;
     }
-    
+
     .guarantee-text h2 {
       font-size: 2.5rem;
       color: var(--secondary);
       margin-bottom: 20px;
     }
-    
+
     .guarantee-text p {
       color: var(--gray);
       margin-bottom: 30px;
     }
-    
+
     .guarantee-badge {
       flex: 1;
       text-align: center;
     }
-    
+
     .badge-circle {
       width: 250px;
       height: 250px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: var(--care-gradient);
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -732,37 +778,44 @@
       align-items: center;
       color: white;
       box-shadow: 0 15px 40px rgba(67, 97, 238, 0.3);
+      animation: pulse 2s infinite;
     }
-    
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+
     .badge-circle i {
       font-size: 4rem;
       margin-bottom: 15px;
     }
-    
+
     .badge-circle h3 {
       font-size: 2rem;
       margin-bottom: 5px;
     }
-    
+
     /* Contact Section */
     .contact-section {
       padding: 80px 0;
       background: linear-gradient(135deg, #f0f4ff, #e6ebff);
       text-align: center;
     }
-    
+
     .contact-section h2 {
       font-size: 2.5rem;
       color: var(--secondary);
       margin-bottom: 15px;
     }
-    
+
     .contact-section p {
       color: var(--gray);
       max-width: 600px;
       margin: 0 auto 30px;
     }
-    
+
     .contact-btn {
       display: inline-block;
       background: #25D366;
@@ -775,103 +828,103 @@
       transition: var(--transition);
       font-size: 1.1rem;
     }
-    
+
     .contact-btn i {
       margin-right: 10px;
     }
-    
+
     .contact-btn:hover {
       background: #128C7E;
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
     }
-    
+
     .contact-info {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
     }
-    
+
     .contact-item {
       display: flex;
       align-items: center;
       font-weight: 500;
       color: var(--dark);
     }
-    
+
     .contact-item i {
       margin-right: 10px;
       font-size: 1.2rem;
       color: var(--primary);
     }
-    
+
     /* Footer */
     footer {
       background: var(--dark);
       color: white;
       padding: 60px 0 20px;
     }
-    
+
     .footer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 40px;
       margin-bottom: 40px;
     }
-    
+
     .footer-col h4 {
       font-size: 1.3rem;
       margin-bottom: 20px;
       display: flex;
       align-items: center;
     }
-    
+
     .footer-col h4 i {
       margin-right: 10px;
       color: var(--accent);
     }
-    
+
     .footer-col p {
       color: #adb5bd;
       margin-bottom: 20px;
     }
-    
+
     .disclaimer {
       background: rgba(255, 255, 255, 0.05);
       padding: 15px;
       border-radius: var(--border-radius);
       margin-top: 20px;
     }
-    
+
     .disclaimer p {
       font-size: 13px;
       color: #adb5bd;
     }
-    
+
     .disclaimer strong {
       color: #f8f9fa;
     }
-    
+
     .footer-col ul {
       list-style: none;
     }
-    
+
     .footer-col ul li {
       margin-bottom: 10px;
     }
-    
+
     .footer-col ul li a {
       color: #adb5bd;
       text-decoration: none;
       transition: var(--transition);
     }
-    
+
     .footer-col ul li a:hover {
       color: white;
       padding-left: 5px;
     }
-    
+
     .newsletter input {
       width: 100%;
       padding: 12px 15px;
@@ -880,13 +933,13 @@
       margin-bottom: 10px;
       font-size: 14px;
     }
-    
+
     .social-links {
       display: flex;
       gap: 15px;
       margin-top: 20px;
     }
-    
+
     .social-links a {
       display: flex;
       align-items: center;
@@ -899,12 +952,12 @@
       text-decoration: none;
       transition: var(--transition);
     }
-    
+
     .social-links a:hover {
       background: var(--primary);
       transform: translateY(-3px);
     }
-    
+
     .copyright {
       text-align: center;
       padding-top: 20px;
@@ -912,61 +965,139 @@
       color: #adb5bd;
       font-size: 14px;
     }
-    
+
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .popup.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .popup-content {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+      transform: translateY(-50px);
+      transition: transform 0.4s ease;
+    }
+
+    .popup.active .popup-content {
+      transform: translateY(0);
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--gray);
+      transition: color 0.3s ease;
+    }
+
+    .popup-close:hover {
+      color: var(--accent);
+    }
+
+    .popup-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .popup-header i {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    .popup-header h3 {
+      font-size: 1.8rem;
+      color: var(--secondary);
+    }
+
+    .popup-body {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .popup-body p {
+      color: var(--gray);
+      margin-bottom: 15px;
+    }
+
     /* Responsive */
     @media (max-width: 992px) {
       .hero-content {
         flex-direction: column;
       }
-      
+
       .hero-text {
         padding-right: 0;
         margin-bottom: 50px;
         text-align: center;
       }
-      
+
       .hero-text p {
         margin-left: auto;
         margin-right: auto;
       }
-      
+
       .hero-btns {
         justify-content: center;
       }
-      
+
       .offer-card {
         margin: 0 auto;
       }
-      
+
       .guarantee-content {
         flex-direction: column;
       }
-      
+
       .guarantee-text {
         text-align: center;
       }
     }
-    
+
     @media (max-width: 768px) {
       nav {
         display: none;
       }
-      
+
       .hero-text h1 {
         font-size: 2.5rem;
       }
-      
+
       .hero-btns {
         flex-direction: column;
         align-items: center;
       }
-      
+
       .trust-badges {
         flex-direction: column;
         align-items: center;
         gap: 15px;
       }
-      
+
       .care-icons {
         flex-direction: column;
         align-items: center;
@@ -989,24 +1120,24 @@
           <i class="fas fa-gem"></i>
           <span>UjalaDeals</span>
         </div>
-        
+
         <nav>
           <ul>
             <li><a href="#" class="active">Home</a></li>
             <li><a href="#featured">Hot Deals</a></li>
-            <li><a href="#products">All Products</a></li>
+            <li><a href="#products">Premium Tools</a></li>
             <li><a href="#testimonials">Success Stories</a></li>
-            <li><a href="#contact">Support</a></li>
+            <li><a href="#contact">Care Support</a></li>
           </ul>
         </nav>
-        
+
         <div class="header-actions">
-          <div class="cart-icon">
+          <div class="cart-icon" id="cart-btn">
             <i class="fas fa-shopping-cart fa-lg"></i>
             <span class="cart-count">3</span>
           </div>
-          <button class="btn btn-primary" id="account-btn">
-            <i class="fas fa-user"></i> Account
+          <button class="btn btn-care" id="account-btn">
+            <i class="fas fa-user"></i> My Success Dashboard
           </button>
         </div>
       </div>
@@ -1018,11 +1149,18 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1>Transform Your Digital Life With <span>Tools That Care</span></h1>
-          <p>Discover why over 12,437 creators choose UjalaDeals for premium digital tools at revolutionary prices. We don't just sell software - we care about your success journey.</p>
+          <h1>Premium Digital Tools That <span>Care About Your Success</span></h1>
+          <p>Join 12,437+ creators who are achieving more with our handpicked digital solutions — because your success is our mission.</p>
           
+          <ul class="hero-bullets">
+            <li><strong>Instant access</strong> to premium tools at revolutionary prices</li>
+            <li><strong>Personalized guidance</strong> from our success advisors</li>
+            <li><strong>Lifetime support</strong> because we genuinely care about your journey</li>
+            <li><strong>Risk-free guarantee</strong> that puts your success first</li>
+          </ul>
+
           <div class="hero-btns">
-            <button class="btn btn-primary btn-large">
+            <button class="btn btn-care btn-large">
               <i class="fas fa-bolt"></i> Explore Life-Changing Deals
             </button>
             <button class="btn btn-accent btn-large" id="hero-whatsapp">
@@ -1030,7 +1168,7 @@
             </button>
           </div>
         </div>
-        
+
         <div class="hero-image">
           <div class="offer-card">
             <div class="offer-badge">LIMITED STOCK</div>
@@ -1038,7 +1176,7 @@
               <h3>Ultimate Creator Bundle</h3>
               <p>Everything you need to succeed in one package</p>
             </div>
-            
+
             <div class="offer-features">
               <div class="feature">
                 <i class="fas fa-graduation-cap"></i>
@@ -1053,12 +1191,12 @@
                 <span>Priority Support</span>
               </div>
             </div>
-            
+
             <div class="price">
               <div class="amount">Rs. 1299</div>
               <div class="original">Rs. 15,000</div>
             </div>
-            
+
             <div class="countdown">
               <p>Offer ends in:</p>
               <div class="countdown-timer">
@@ -1067,7 +1205,7 @@
                 <div class="countdown-item">45</div>
               </div>
             </div>
-            
+
             <button class="btn btn-accent btn-block" id="bundle-whatsapp">
               <i class="fas fa-shopping-cart"></i> Grab This Life-Changing Deal
             </button>
@@ -1104,7 +1242,7 @@
         <h2>Real Success Stories</h2>
         <p>Hear from creators whose lives changed with UjalaDeals</p>
       </div>
-      
+
       <div class="testimonial-grid">
         <div class="testimonial-card">
           <div class="testimonial-content">
@@ -1118,7 +1256,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="testimonial-card">
           <div class="testimonial-content">
             "I was skeptical about the low prices, but the Canva Pro account worked perfectly. When I had a small issue, their support team resolved it in 15 minutes. This level of care is unheard of!"
@@ -1131,7 +1269,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="testimonial-card">
           <div class="testimonial-content">
             "The Dhruv Rathee courses helped me build a YouTube channel that now earns full-time income. But what impressed me most was when they followed up to ask about my progress. They truly care about customers."
@@ -1155,13 +1293,13 @@
         <h2>This Week's Hottest Deals</h2>
         <p>Limited quantity available - creators are grabbing these fast!</p>
       </div>
-      
+
       <div class="products-grid">
         <!-- Featured Product 1 -->
         <div class="product-card">
           <div class="featured-tag">BEST SELLER</div>
           <div class="product-tag">Rs. 199</div>
-          <div class="product-image" style="background-color: #ffecb3;"></div>
+          <div class="product-image" style="background-image: url('assets/a (4).jpg');"></div>
           <div class="product-info">
             <h3>Canva Pro Lifetime</h3>
             <p>Unlock premium design features, templates, and assets that make you look like a professional designer.</p>
@@ -1170,11 +1308,11 @@
             </button>
           </div>
         </div>
-        
+
         <!-- Featured Product 2 -->
         <div class="product-card">
           <div class="product-tag">Rs. 899</div>
-          <div class="product-image" style="background-color: #bbdefb;"></div>
+          <div class="product-image" style="background-image: url('assets/b (3).jpg');"></div>
           <div class="product-info">
             <h3>ElevenLabs Premium</h3>
             <p>Create human-like voiceovers that captivate your audience - perfect for videos and podcasts.</p>
@@ -1183,11 +1321,11 @@
             </button>
           </div>
         </div>
-        
+
         <!-- Featured Product 3 -->
         <div class="product-card">
           <div class="product-tag">Rs. 999</div>
-          <div class="product-image" style="background-color: #c8e6c9;"></div>
+          <div class="product-image" style="background-image: url('assets/b (9).jpg');"></div>
           <div class="product-info">
             <h3>Fiverr Pro Gig Designs</h3>
             <p>Stand out on Fiverr with professional gig designs that attract premium clients.</p>
@@ -1196,11 +1334,11 @@
             </button>
           </div>
         </div>
-        
+
         <!-- Featured Product 4 -->
         <div class="product-card">
           <div class="product-tag">Rs. 699</div>
-          <div class="product-image" style="background-color: #f8bbd0;"></div>
+          <div class="product-image" style="background-image: url('assets/b (9).jpg');"></div>
           <div class="product-info">
             <h3>WhatsApp Marketing Suite</h3>
             <p>Scale your business with our complete WhatsApp marketing solution. Perfect for entrepreneurs.</p>
@@ -1219,7 +1357,7 @@
       <div class="care-content">
         <h2>We Genuinely Care About Your Success</h2>
         <p>At UjalaDeals, we're not just selling digital products - we're invested in your creative journey. Our "Care First" approach means you get:</p>
-        
+
         <div class="care-icons">
           <div class="care-icon">
             <i class="fas fa-hands-helping"></i>
@@ -1253,12 +1391,12 @@
         <h2>Our Care-Curated Collection</h2>
         <p>Every product is handpicked to genuinely help you succeed</p>
       </div>
-      
+
       <div class="products-grid">
         <!-- Product 1 -->
         <div class="product-card">
           <div class="product-tag">Rs. 199</div>
-          <div class="product-image" style="background-color: #ffecb3;"></div>
+          <div class="product-image" style="background-image: url('assets/a (4).jpg');"></div>
           <div class="product-info">
             <h3>Canva Pro Lifetime</h3>
             <p>Professional design made simple with premium templates, assets, and features.</p>
@@ -1267,11 +1405,11 @@
             </button>
           </div>
         </div>
-        
+
         <!-- Product 2 -->
         <div class="product-card">
           <div class="product-tag">Rs. 399</div>
-          <div class="product-image" style="background-color: #d1c4e9;"></div>
+          <div class="product-image" style="background-image: url('assets/c.jpg');"></div>
           <div class="product-info">
             <h3>Dhruv Rathee Masterclass Bundle</h3>
             <p>4 premium courses: AI, Time Management, ChatGPT, and YouTube Success.</p>
@@ -1280,12 +1418,12 @@
             </button>
           </div>
         </div>
-        
+
         <!-- Product 3 -->
         <div class="product-card">
           <div class="featured-tag">MOST POPULAR</div>
           <div class="product-tag">Rs. 1299</div>
-          <div class="product-image" style="background-color: #bbdefb;"></div>
+          <div class="product-image" style="background-image: url('assets/allinone.jpg');"></div>
           <div class="product-info">
             <h3>All-in-One Creator Suite</h3>
             <p>Everything you need: ChatGPT 4, Semrush, Canva, LinkedIn Pro, and 20+ tools.</p>
@@ -1302,11 +1440,11 @@
             </button>
           </div>
         </div>
-        
+
         <!-- Product 4 -->
         <div class="product-card">
           <div class="product-tag">Rs. 599</div>
-          <div class="product-image" style="background-color: #c8e6c9;"></div>
+          <div class="product-image" style="background-image: url('assets/premisum.jpg');"></div>
           <div class="product-info">
             <h3>Adobe Creative Suite + Courses</h3>
             <p>All Adobe apps + 600+ premium courses on marketing, design, and business.</p>
@@ -1323,11 +1461,11 @@
             </button>
           </div>
         </div>
-        
+
         <!-- Product 5 -->
         <div class="product-card">
           <div class="product-tag">Rs. 599</div>
-          <div class="product-image" style="background-color: #f8bbd0;"></div>
+          <div class="product-image" style="background-image: url('assets/abcd.jpg');"></div>
           <div class="product-info">
             <h3>Shahid Anwar Success System</h3>
             <p>Complete collection of premium courses by digital marketing expert Shahid Anwar.</p>
@@ -1336,11 +1474,11 @@
             </button>
           </div>
         </div>
-        
+
         <!-- Product 6 -->
         <div class="product-card">
           <div class="product-tag">Rs. 399</div>
-          <div class="product-image" style="background-color: #ffe0b2;"></div>
+          <div class="product-image" style="background-image: url('assets/ebv.jpg');"></div>
           <div class="product-info">
             <h3>Top Instructor Bundle</h3>
             <p>Courses by Tanveer Nandl, IDM Pakistan, Ismail Blogger, and Hamza Ali.</p>
@@ -1349,12 +1487,12 @@
             </button>
           </div>
         </div>
-        
+
         <!-- Product 7 -->
         <div class="product-card">
           <div class="featured-tag">NEW</div>
           <div class="product-tag">Rs. 1999</div>
-          <div class="product-image" style="background-color: #b2ebf2;"></div>
+          <div class="product-image" style="background-image: url('assets/all in one.jpg');"></div>
           <div class="product-info">
             <h3>Ultimate Creator Plan</h3>
             <p>Everything in All-in-One plus Quillbot, Hix.ai, Ubersuggest, Vidiq, and more.</p>
@@ -1386,11 +1524,11 @@
             <li>Offer a full refund if we can't resolve it</li>
           </ul>
           <p>Your satisfaction is our priority - we care too much about your success to leave you unsatisfied.</p>
-          <button class="btn btn-primary">
+          <button class="btn btn-care">
             <i class="fas fa-shield-alt"></i> Learn About Our Guarantee
           </button>
         </div>
-        
+
         <div class="guarantee-badge">
           <div class="badge-circle">
             <i class="fas fa-hand-holding-heart"></i>
@@ -1407,11 +1545,11 @@
     <div class="container">
       <h2>Personalized Guidance Just For You</h2>
       <p>Confused about what tools you need? Our success advisors are ready to help you choose the perfect solution for your goals.</p>
-      
+
       <a href="https://wa.me/971558132128" class="contact-btn">
         <i class="fab fa-whatsapp"></i> Chat With Our Success Team
       </a>
-      
+
       <div class="contact-info">
         <div class="contact-item">
           <i class="fas fa-phone-alt"></i> +971 55 813 2128
@@ -1437,7 +1575,7 @@
             <p><strong>Our Care Promise:</strong> We treat every customer like family, ensuring you get not just tools, but a partner invested in your growth.</p>
           </div>
         </div>
-        
+
         <div class="footer-col">
           <h4><i class="fas fa-box"></i> Products</h4>
           <ul>
@@ -1447,7 +1585,7 @@
             <li><a href="#">Business Resources</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-col">
           <h4><i class="fas fa-headset"></i> Support</h4>
           <ul>
@@ -1457,12 +1595,12 @@
             <li><a href="#">Contact Our Team</a></li>
           </ul>
         </div>
-        
+
         <div class="footer-col">
           <h4><i class="fas fa-envelope"></i> Creator Insights</h4>
           <div class="newsletter">
             <input type="email" placeholder="Your email address">
-            <button class="btn btn-primary btn-block">Get Success Tips</button>
+            <button class="btn btn-care btn-block">Get Success Tips</button>
           </div>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1472,12 +1610,31 @@
           </div>
         </div>
       </div>
-      
+
       <div class="copyright">
         © 2025 UjalaDeals. We genuinely care about your success. All rights reserved.
       </div>
     </div>
   </footer>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="popup-content">
+      <span class="popup-close" id="popup-close">&times;</span>
+      <div class="popup-header">
+        <i class="fas fa-cogs"></i>
+        <h3>Feature Coming Soon!</h3>
+      </div>
+      <div class="popup-body">
+        <p>We're working hard to bring you this feature as soon as possible.</p>
+        <p>In the meantime, please contact us on WhatsApp for any assistance:</p>
+        <a href="https://wa.me/971558132128" class="btn btn-care">
+          <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+        </a>
+        <p>We care about your experience and will notify you when this feature is ready!</p>
+      </div>
+    </div>
+  </div>
 
   <script>
     // Simple countdown timer
@@ -1489,27 +1646,27 @@
           let hours = parseInt(countdownItems[0].textContent);
           let minutes = parseInt(countdownItems[1].textContent);
           let seconds = parseInt(countdownItems[2].textContent);
-          
+
           seconds--;
-          
+
           if(seconds < 0) {
             seconds = 59;
             minutes--;
-            
+
             if(minutes < 0) {
               minutes = 59;
               hours--;
             }
           }
-          
+
           countdownItems[0].textContent = hours.toString().padStart(2, '0');
           countdownItems[1].textContent = minutes.toString().padStart(2, '0');
           countdownItems[2].textContent = seconds.toString().padStart(2, '0');
         }
       }
-      
+
       setInterval(updateCountdown, 1000);
-      
+
       // WhatsApp button functionality
       const whatsappButtons = document.querySelectorAll('.whatsapp-btn');
       whatsappButtons.forEach(button => {
@@ -1517,19 +1674,53 @@
           const product = this.getAttribute('data-product');
           const price = this.getAttribute('data-price');
           
-          // In a real implementation, this would open WhatsApp with a pre-filled message
-          alert(`Thanks for your interest in ${product} for Rs. ${price}! In a real implementation, this would open WhatsApp to complete your purchase.`);
+          // Open WhatsApp with pre-filled message
+          const message = `I'm interested in ${product} for Rs. ${price}. Please provide access.`;
+          const encodedMessage = encodeURIComponent(message);
+          window.open(`https://wa.me/971558132128?text=${encodedMessage}`, '_blank');
         });
       });
-      
+
       // Hero WhatsApp button
       document.getElementById('hero-whatsapp').addEventListener('click', function() {
-        alert("In a real implementation, this would open WhatsApp for personalized advice.");
+        const message = "I need personalized advice about which digital products would work best for me.";
+        const encodedMessage = encodeURIComponent(message);
+        window.open(`https://wa.me/971558132128?text=${encodedMessage}`, '_blank');
       });
-      
+
       // Bundle WhatsApp button
       document.getElementById('bundle-whatsapp').addEventListener('click', function() {
-        alert("In a real implementation, this would open WhatsApp to purchase the Ultimate Creator Bundle.");
+        const message = "I want to purchase the Ultimate Creator Bundle for Rs. 1299";
+        const encodedMessage = encodeURIComponent(message);
+        window.open(`https://wa.me/971558132128?text=${encodedMessage}`, '_blank');
+      });
+
+      // Popup functionality
+      const popup = document.getElementById('popup');
+      const popupClose = document.getElementById('popup-close');
+      const accountBtn = document.getElementById('account-btn');
+      const cartBtn = document.getElementById('cart-btn');
+
+      // Show popup
+      function showPopup() {
+        popup.classList.add('active');
+      }
+
+      // Hide popup
+      function hidePopup() {
+        popup.classList.remove('active');
+      }
+
+      // Event listeners
+      accountBtn.addEventListener('click', showPopup);
+      cartBtn.addEventListener('click', showPopup);
+      popupClose.addEventListener('click', hidePopup);
+
+      // Close popup when clicking outside
+      popup.addEventListener('click', function(e) {
+        if(e.target === popup) {
+          hidePopup();
+        }
       });
     });
   </script>
